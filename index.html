@@ -66,11 +66,14 @@
         import "./packages/crs-binding/crs-binding.js";
         import "./packages/crs-modules/crs-modules.js";
         import "./packages/crs-router/crs-router.js";
+        import "./bootstrap/boot-crs-schema.js";
         import IndexViewModel from "./index.js";
 
         async function load() {
             await crs.modules.enableBinding([
-                ["my-component", "/components/component.js"]
+                ["my-component", "/components/component.js"],
+                ["bindable-form", "/components/bindable-form.js"],
+                ["my-group", "/components/my-group.js"]
             ])
 
             document.viewModel = new IndexViewModel(document.body);

@@ -1,0 +1,38 @@
+{
+  "variables": {
+    "translations": {
+      "welcome": "Welcome",
+      "username": "User Name"
+    },
+    "data": {
+      "username": "Kieran Reilly"
+    }
+  },
+  "body": {
+    "elements": [
+      {
+        "element": "h2",
+        "content": "Basic Form"
+      },
+      {
+        "element": "h3",
+        "content": "@translations.welcome"
+      },
+      {
+        "element": "label",
+        "content": "@translations.username"
+      },
+      {
+        "element": "input",
+        "attributes": {
+          "aria-label.bind": "@translations.username",
+          "value.bind": "@data.username"
+        }
+      },
+      {
+        "element": "p",
+        "content": "${schema.variables.data.username}"
+      }
+    ]
+  }
+}

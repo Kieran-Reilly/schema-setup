@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});exports.BaseManager=class{constructor(e){this.parser=e,this.isManager=!0}async dispose(){await this.reset(),delete this.parser}async assert(e,s,t){const a=1==e();return a&&s.push(t),!a}async validate(e,s){if(null!=e.elements)for(let t of e.elements)await this.parser.validateItem(t,s)}async reset(){}};

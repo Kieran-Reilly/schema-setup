@@ -23,6 +23,12 @@
       "hasStyle": true
     },
     {
+      "title": "Basic Schema",
+      "hash": "#basic-schema",
+      "view": "basic-schema",
+      "hasStyle": true
+    },
+    {
       "title": "404",
       "hash": "#404",
       "view": "404",

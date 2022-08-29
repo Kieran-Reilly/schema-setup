@@ -1,0 +1,14 @@
+div[class="input-container"] {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 7.5rem;
+    margin-left: 0.5rem;
+}
+
+a {
+    display: block;
+    width: 10rem;
+}

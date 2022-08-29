@@ -1,0 +1,50 @@
+<style>
+    .group-header {
+        display: flex;
+        flex-direction: row;
+        height: 3rem;
+        background: lightcyan;
+        align-items: center;
+    }
+
+    .group-button {
+        border: none;
+        background: lightcyan;
+    }
+
+    .group-button svg {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        transition-property: transform
+    }
+
+    :host([expanded="false"]) .group-button svg {
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg)
+    }
+
+    :host h4 {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    :host([expanded="false"]) .group-body {
+        display: none;
+    }
+</style>
+<div class="group-header">
+    <button class="group-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/></svg>
+    </button>
+    <h4 class="group-title">Group Title</h4>
+</div>
+<div class="group-body">
+    <slot name="body"></slot>
+</div>
