@@ -46,9 +46,8 @@ export class BindableForm extends crsbinding.classes.BindableElement {
 
         const html = await globalThis.schema.parser.parse(this.schema);
 
-        if (this.querySelector(".form-container") != null) {
-            const container = this.querySelector(".form-container");
-            container.innerHTML = html;
+        if (this.detailsElement != null) {
+            this.detailsElement.innerHTML = html;
             await crsbinding.parsers.parseElements(this.children, this._dataId);
             this.dispatchEvent(new CustomEvent("ready"));
         }
