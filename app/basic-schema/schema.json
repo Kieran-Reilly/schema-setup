@@ -8,6 +8,17 @@
       "username": "Kieran Reilly"
     }
   },
+  "datasets": [
+    {
+      "id": 0,
+      "name": "model",
+      "fields": [
+        {
+          "name": "username"
+        }
+      ]
+    }
+  ],
   "body": {
     "elements": [
       {
@@ -24,14 +35,14 @@
       },
       {
         "element": "input",
+        "field": "model.username",
         "attributes": {
-          "aria-label.bind": "@translations.username",
-          "value.bind": "@data.username"
+          "aria-label.bind": "@translations.username"
         }
       },
       {
         "element": "p",
-        "content": "${schema.variables.data.username}"
+        "content": "${model.username}"
       }
     ]
   }
